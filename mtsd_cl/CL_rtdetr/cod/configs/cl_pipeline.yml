@@ -6,7 +6,7 @@ total_tasks: 2
 # CL Strategy
 pseudo_label: True
 distill_attn: False
-teacher_path: "/kaggle/input/checkpoint-for-mtsd-model/scheme2_221_classes_15071_t0_3e_ap15.33.pth"
+teacher_path: "/mnt/thanhpd/code/mtsd_cl/CL_rtdetr/cod/outputs/weights/15071_t0_35e_ap38.86.pth"
 
 # CL Rehearsal
 rehearsal: True
