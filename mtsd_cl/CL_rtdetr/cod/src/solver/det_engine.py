@@ -11,7 +11,6 @@ from termcolor import colored, cprint
 from pyexpat import model
 
 import copy
-import wandb
 from tqdm import tqdm
 
 
@@ -206,13 +205,6 @@ def train_one_epoch(
             kd_loss=location_loss.item() if distill_attn else 0,
         )
 
-        wandb.log(
-            {
-                "RT-DETR Loss": loss_value,
-                "KD Loss": (location_loss.item() if distill_attn else 0),
-            }
-        )
-
 
 @torch.no_grad()
 def evaluate(
@@ -259,16 +251,5 @@ def evaluate(
 
     if "bbox" in iou_types:
         stats["coco_eval_bbox"] = coco_evaluator.coco_eval["bbox"].stats.tolist()
-
-    wandb.log(
-        {
-            "AP@0.5:0.95": stats["coco_eval_bbox"][0] * 100,
-            "AP@0.5": stats["coco_eval_bbox"][1] * 100,
-            "AP@0.75": stats["coco_eval_bbox"][2] * 100,
-            "AP@0.5:0.95 Small": stats["coco_eval_bbox"][3] * 100,
-            "AP@0.5:0.95 Medium": stats["coco_eval_bbox"][4] * 100,
-            "AP@0.5:0.95 Large": stats["coco_eval_bbox"][5] * 100,
-        }
-    )
 
     return stats["coco_eval_bbox"][0] * 100
