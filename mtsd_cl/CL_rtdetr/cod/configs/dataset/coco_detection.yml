@@ -9,8 +9,8 @@ train_dataloader:
   dataset:
     type: CocoDetectionCL
 
-    img_folder: /kaggle/input/mapillary-traffic-sign-dataset/mtsd_fully_annotated_train_images/images
-    ann_file: /kaggle/input/mtsd-preprocessing/train_output_file_coco.json
+    img_folder: /mnt/thanhpd/MTSD/mtsd_fully_annotated_train_images/images
+    ann_file: /mnt/thanhpd/code/mtsd_cl/CL_rtdetr/train_output_file_coco.json
     transforms:
       type: Compose
       ops: ~
@@ -20,8 +20,8 @@ val_dataloader:
   dataset:
     type: CocoDetectionCL
 
-    img_folder: /kaggle/input/mapillary-traffic-sign-dataset/mtsd_v2_fully_annotated_images.val.zip/images
-    ann_file: /kaggle/input/mtsd-preprocessing/val_output_file_coco.json
+    img_folder: /mnt/thanhpd/MTSD/mtsd_v2_fully_annotated_images.val.zip/images
+    ann_file: /mnt/thanhpd/code/mtsd_cl/CL_rtdetr/val_output_file_coco.json
     transforms:
       type: Compose
       ops: ~
