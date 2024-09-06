@@ -1,0 +1,18 @@
+
+# CL General
+start_task: 0
+total_tasks: 2
+
+# CL Strategy
+pseudo_label: True
+distill_attn: False
+teacher_path: "/kaggle/input/checkpoint-for-mtsd-model/scheme2_221_classes_15071_t0_3e_ap15.33.pth"
+
+# CL Rehearsal
+rehearsal: True
+
+# CL Eval
+fpp: True
+
+# WandB
+#wandb_name: "7010_t0_10e"
