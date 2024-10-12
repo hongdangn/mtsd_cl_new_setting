@@ -22,13 +22,13 @@ def data_setting(ratio: str, random_setting: bool = False):
     ]
     total_classes = list(range(0, 221))
     divided_classes = [
-        list(range(0, 150)),  # 45 classes
-        list(range(150, 221)),  # 10 classes
+        list(range(0, 129)),  # 45 classes
+        list(range(130, 221)),  # 10 classes
 
     ]
 
     ratio_to_classes = {
-    "15071": [flatten_list(divided_classes[:-1]), divided_classes[-1]]
+    "12992": [flatten_list(divided_classes[:-1]), divided_classes[-1]]
     }
 
     divided_classes_detail = ratio_to_classes.get(ratio, total_classes)
