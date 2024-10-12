@@ -20,7 +20,7 @@ val_dataloader:
   dataset:
     type: CocoDetectionCL
 
-    img_folder: /mnt/thanhpd/MTSD/mtsd_fully_annotated_val_images/images
+    img_folder: /mnt/thanhpd/MTSD/mtsd_v2_fully_annotated_images.val.zip/images
     ann_file: /mnt/thanhpd/mtsd_cl_new_setting/mtsd_cl/CL_rtdetr/val_output_file_coco.json
     transforms:
       type: Compose

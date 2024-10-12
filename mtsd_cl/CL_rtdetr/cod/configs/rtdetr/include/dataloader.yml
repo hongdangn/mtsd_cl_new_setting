@@ -16,8 +16,8 @@ train_dataloader:
         - { type: ConvertBox, out_fmt: "cxcywh", normalize: True }
 
     # CL change here
-    data_ratio: "15071"
-    task_idx: 1
+    data_ratio: "12992"
+    task_idx: 0
     buffer_mode: True
     buffer_rate: 0.1
 
@@ -36,8 +36,8 @@ val_dataloader:
         - { type: ConvertDtype }
 
     # CL change here
-    data_ratio: "15071"
-    task_idx: 1
+    data_ratio: "12992"
+    task_idx: 0
     buffer_mode: True
 
   shuffle: False
