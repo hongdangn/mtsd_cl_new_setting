@@ -13,6 +13,7 @@ from src.solver import TASKS
 import wandb
 import torch
 import numpy as np
+import PIL
 
 
 def set_seed_and_config():
@@ -28,6 +29,8 @@ def main(
 ) -> None:
     set_seed_and_config()
     dist.init_distributed()
+
+    PIL.Image.MAX_IMAGE_PIXELS = None
 
     assert not all(
         [args.tuning, args.resume]
